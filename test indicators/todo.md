@@ -1,0 +1,11 @@
+- Update the entire program to include buy/sell signal logic from all indicators.
+- Calculate performance metrics (e.g., net profit, Sharpe ratio, maximum drawdown, etc.)
+- Compare the backtest results against predetermined benchmarks or criteria. For instance, if the Sharpe ratio is below a certain threshold, the strategy might need refinement.
+- Adjust signal thresholds, incorporate additional indicators, or change the logic based on backtest feedback. For example, if false positives are frequent, consider adding additional confirmation indicators or adjusting thresholds.
+- Confirm signals based on trends in other timeframes (Multi-Timeframe Logic).
+- Algorithmically detect and add Fibonacci retracements and trendlines.
+- Use Fair Value Gap Detection as a potential signal for trading.
+- Incorporate historical context with lagged data and use it as features for potential machine learning models.
+- Allow strategy tweaks based on backtesting/live testing results (Continuous Refinement).
+- Attempt to retrieve options data from Yahoo Finance.
+- Adapt backtesting functionality for futures options trading.
