@@ -15,28 +15,28 @@
 - Gather the data and store it in whatever the best format is determined to be.
 - Deal with missing data in whatever way may be necessary, whether that be averaging, truncation, mean/median/mode, a model to predict missing values, or something else.
 - Determine whether I need to standardize or normalize the data and do so if necessary.
-  - If either one is necessary be sure it's able to handle outliers. Also make sure the rest of the model is made to handle outliers.
+  - If either one is necessary, be sure, it's able to handle outliers. Also make sure the rest of the model is made to handle outliers.
 - Check for multicollinearity and deal with it if necessary.
 
 ## Feature Engineering
 
 - After organizing the data, consider creating lagged features.
   - May not be necessary if I use RNNs or LSTMs, but it's worth considering.
-- Do research on the importantce of interaction features and whether or not they're necessary in this case.
+- Do research on the importance of interaction features and whether they're necessary in this case.
 
 ## Model Building
 
 - After gathering the data, start with a rudimentary model test with something like matplotlib and scikit-learn.
   - Deduce the best general model for the data and make refinements to the data gathering and storage process if necessary.
   - After that, start building the actual model with Tensorflow, PyTorch, or Keras.
-- Determine the best architecture for the model. Afterwards, do hyperparameter tuning. (Do more research into these)
+- Determine the best architecture for the model. Afterward, do hyperparameter tuning. (Do more research into these)
 - Be sure to check the model for over/underfitting. If it's overfitting, use regularization. If it's underfitting, add more data or increase the model's complexity. (Check to see if this ^^^ is true, source is GitHub Copilot)
 - Do research into Vanishing and Exploding Gradients for RNNs and LSTMs. If it's an issue, use gradient clipping. (Research gradient clipping, also sourced from Copilot)
   - This point can improve performance
 
 ## Model Tuning
 
-- Continue fine-tuning the model using online/incremental learning so it can continue to learn in real-time
+- Continue fine-tuning the model using online/incremental learning, so it can continue to learn in real-time
 - Will need to determine a timeframe for fine-tuning to be done. Every N data points.
   - Tools like Tensorflow's `partial_fit()`, Tensorflow Extended (TFX), or PyTorch can be used for this.
   - TFX can make a pipeline for the model to be trained on new data as it comes in.
